@@ -89,7 +89,8 @@ namespace XTBPlugin.DeprecationChecker
             this.Controls.Add(this.toolStripMenu);
             this.Name = "DeprecationCheckerControl";
             this.Size = new System.Drawing.Size(559, 300);
-            this.Load += new System.EventHandler(this.MyPluginControl_Load);
+            this.OnCloseTool += new System.EventHandler(this.DeprecationCheckerControl_OnCloseTool);
+            this.Load += new System.EventHandler(this.DeprecationChecker_Load);
             this.toolStripMenu.ResumeLayout(false);
             this.toolStripMenu.PerformLayout();
             this.ResumeLayout(false);

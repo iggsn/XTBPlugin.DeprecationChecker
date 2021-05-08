@@ -35,11 +35,9 @@ namespace XTBPlugin.DeprecationChecker
             dockPanelMain.Theme = theme;
         }
 
-        private void MyPluginControl_Load(object sender, EventArgs e)
+        private void DeprecationChecker_Load(object sender, EventArgs e)
         {
-            //ShowInfoNotification("This is a notification that can lead to XrmToolBox repository", new Uri("https://github.com/MscrmTools/XrmToolBox"));
-
-            // Loads or creates the settings for the plugin
+             // Loads or creates the settings for the plugin
             if (!SettingsManager.Instance.TryLoad(GetType(), out mySettings))
             {
                 mySettings = new Settings();
@@ -96,7 +94,7 @@ namespace XTBPlugin.DeprecationChecker
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void MyPluginControl_OnCloseTool(object sender, EventArgs e)
+        private void DeprecationCheckerControl_OnCloseTool(object sender, EventArgs e)
         {
             // Before leaving, save the settings
             SettingsManager.Instance.Save(GetType(), mySettings);
